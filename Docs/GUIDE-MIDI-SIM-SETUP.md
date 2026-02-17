@@ -623,7 +623,7 @@ vJoy Devices (virtual DirectInput controllers)
         ├─ vJoy 2: 8 axes, 32 buttons, 3 HATs
         ├─ vJoy 3: 8 axes, 32 buttons, 2 HATs
         ├─ vJoy 4: 8 axes, 32 buttons, 1 HAT
-        └─ vJoy 5: 8 axes, 128 buttons, 4 HATs (SimHub reserved)
+        └─ vJoy 5: 8 axes, 128 buttons, 0 HATs (SimHub reserved)
         ↓
 Joystick ID# Swapper (ID persistence)
         ├─ JoyID #1: VKB Gladiator R
@@ -686,7 +686,7 @@ Windows cannot reliably distinguish identical vJoy devices. Each device MUST hav
 - **HAT (1):** Unused (for Windows differentiation only)
 
 #### **vJoy Device 5 (JoyID #8):**
-- **Configuration:** 8 axes, 4 HATs, 128 buttons
+- **Configuration:** 8 axes, 0 HATs, 128 buttons
 - **Purpose:** Reserved for SimHub LED feedback (future)
 - Not used by games directly
 
@@ -699,9 +699,9 @@ Windows cannot reliably distinguish identical vJoy devices. Each device MUST hav
 **Solution:** Convert surplus analog faders to 3-state digital switches using UCR's Axis-to-Button plugin.
 
 **How it works:**
-- **Fader at TOP (>75%):** Button A pressed
-- **Fader at CENTER (25-75%):** Both buttons released (neutral)
-- **Fader at BOTTOM (<25%):** Button B pressed
+- **Fader at TOP (>70%):** Button A pressed
+- **Fader at CENTER (30-70%):** Both buttons released (neutral)
+- **Fader at BOTTOM (<30%):** Button B pressed
 
 **Converted in this setup:**
 - MIDIMix master fader: 2 buttons (up/down)
@@ -758,7 +758,7 @@ JoyID #4: vJoy Device 1 (8 axes, 32 buttons, 4 HATs)
 JoyID #5: vJoy Device 2 (8 axes, 32 buttons, 3 HATs)
 JoyID #6: vJoy Device 3 (8 axes, 32 buttons, 2 HATs)
 JoyID #7: vJoy Device 4 (8 axes, 32 buttons, 1 HAT)
-JoyID #8: vJoy Device 5 (128 buttons, SimHub reserved)
+JoyID #8: vJoy Device 5 (128 buttons, 0 HATs, SimHub reserved)
 ```
 
 **Philosophy:**
@@ -887,7 +887,8 @@ This is free knowledge from a working system. I maintain it for my own use and s
 
 **Verification:** All 5 ports listed with "0 Byte" in "Total data" column (idle state normal)
 
-[Screenshot placeholder: loopMIDI with 5 configured ports]
+![loopMIDI - 5 ports configured](Appendix/a000003.png)
+*loopMIDI avec les 5 ports virtuels configurés. Les bytes "Total data" indiquent l'activité MIDI (valeur non-nulle = signal actif).*
 
 ---
 
@@ -921,8 +922,10 @@ This is free knowledge from a working system. I maintain it for my own use and s
 3. Move MIDIMix fader → See CC (Control Change) messages
 4. Press APCmini pad → See Note On/Off messages
 
-[Screenshot placeholder: MIDI-OX routing configuration]
-[Screenshot placeholder: MIDI-OX Monitor Output view with messages]
+![MIDI-OX - Port Routing and MIDI Devices](Appendix/a000004.png)
+*MIDI-OX avec Port Routing (graphique gauche) et MIDI Devices (dialogue droite). Le routing graphique montre clairement: MIDI Mix → InputsToJG, APC mini mk2 → Input2ToUCR.*
+![MIDI-OX Monitor + loopMIDI + UCR actifs simultanément](Appendix/a000023.png)
+*Vue combinée: loopMIDI (bytes actifs: InputsToJG=4836, Input2ToUCR=909), MIDI-OX Monitor Output (notes C#-1 On/Off = pads APCmini pressés), UCR Edit (mapping Axis-to-Button visible). La chaîne complète MIDI → loopMIDI → UCR en action.*
 
 ---
 
@@ -946,7 +949,7 @@ Windows cannot distinguish identical vJoy devices. If all devices have the same 
 | vJoy 2 | 8 | 32 | **3** | MIDIMix knobs + APCmini pads 33-64 |
 | vJoy 3 | 8 | 32 | **2** | MIDIMix knobs + converted faders/buttons |
 | vJoy 4 | 8 | 32 | **1** | MIDIMix knobs + misc buttons |
-| vJoy 5 | 8 | 128 | **4** | SimHub reserved (LED feedback future) |
+| vJoy 5 | 8 | 128 | **0** | SimHub reserved (LED feedback future) |
 
 **Configuration steps:**
 1. Open **vJoy Configure** application
@@ -960,8 +963,13 @@ Windows cannot distinguish identical vJoy devices. If all devices have the same 
 2. Verify all 5 vJoy devices listed
 3. Select each device → **Properties** → verify axes/buttons/HATs match table
 
-[Screenshot placeholder: vJoy Configure with all 5 devices]
-[Screenshot placeholder: joy.cpl showing vJoy devices]
+![vJoy Device 1 - 4 HATs](Appendix/a000001.png) ![vJoy Device 2 - 3 HATs](Appendix/a000002.png) ![vJoy Device 3 - 2 HATs](Appendix/a000006.png) ![vJoy Device 4 - 1 HAT](Appendix/a000011.png) ![vJoy Device 5 - 128 buttons](Appendix/a000012.png)
+
+*vJoy Configure: Devices 1-5. Notez le pattern HATs décroissant: 4→3→2→1→0. C'est ce qui permet à Windows de distinguer chaque device. Device 5 = 128 boutons (réservé SimHub).*
+
+**⚠️ Note sur Device 5:** Le screenshot montre 0 HATs sélectionnés (aucun highlighted dans la liste POVs). Si votre configuration montre différent, c'est normal - l'important est que Device 5 soit distinct des autres par son nombre de boutons (128 vs 32).
+![joy.cpl - Windows Game Controllers](Appendix/a000_joycpl.png)
+*[Screenshot à venir - joy.cpl montrant les 8 devices: VKBsim Gladiator EVO R/L, VKBSim T-Rudder, vJoy Device ×5, tous avec status OK]*
 
 ---
 
@@ -1066,14 +1074,39 @@ Even if you bought the exact same model from the same store, Windows assigns dif
 3. Move MIDIMix fader → Watch corresponding axis move in monitor
 4. Press APCmini pad → Watch corresponding button activate
 
-[Screenshot placeholder: UCR with profile loaded]
-[Screenshot placeholder: vJoy Monitor showing active inputs]
+![UCR - Profil AkaistovJoy chargé](Appendix/a000018.png)
+*UCR avec le profil AkaistovJoy actif. Input devices: InputsToJG et Input2ToUCR (Core_Midi). Output devices: vJoy Stick 1-4 (Core_vJoyInterfaceWrap). Le titre de la fenêtre affiche "AkaistovJoy" = profil en cours d'exécution.*
+![vJoy Monitor - Axes actifs (tous knobs MIDIMix)](Appendix/a000014.png)
+*vJoy Monitor Device #2 avec tous les axes au maximum (barres rouges). 3 POVs visibles = confirme Device 2 = 3 HATs. Bouger les knobs MIDIMix produit ce résultat.*
+
+![vJoy Monitor - Axes partiels (positions variées)](Appendix/a000016.png)
+*vJoy Monitor avec axes à différentes positions - état typique pendant utilisation réelle.*
 
 ---
 
 **UCR Mapping Reference Tables:**
 
 Complete mapping tables provided in **Appendix C** for building YOUR profile with YOUR devices.
+
+**Examples from the reference profile:**
+
+![UCR - Fader mappings (Axis to Axis)](Appendix/a000019.png)
+*MIDIMIX-Fader1-vJoy1: Input = InputsToJG, CH2 CtrlChange ID 19 → Output = vJoy Stick 1, Axes X. Sensitivity 100%, dead zone 0. En dessous: Fader 2 = CC 23 → même vJoy Stick 1.*
+
+![UCR - Axis-to-Button (Mute buttons = 3-state switches)](Appendix/a000020.png)
+*MIDIMIX-Mute1-vJoy3B1: Axis-to-Button avec Button high → vJoy Stick 3 Button 1, Dead zone = 30. Les boutons Mute du MIDIMix sont traités comme des axes (velocity 0-127) et convertis en 2 boutons logiques.*
+
+![UCR - Master fader + lowKnob row](Appendix/a000021.png)
+*MIDIMIX-Master (CC 62) → vJoy Stick 4 Button 1+2 (Axis-to-Button). MIDIMIX-lowKnob1 (CC 18) → vJoy Stick 2 Axes X.*
+
+![UCR - midKnob row](Appendix/a000022.png)
+*MIDIMIX-midKnob1 (CC 17) → vJoy Stick 3 Axes X. MIDIMIX-midKnob2 (CC 21) → vJoy Stick 3 Axes Y.*
+
+**⚠️ Dead zone réel = 30 (pas 25%)**
+
+Les screenshots UCR montrent Dead zone = **30**, pas 25% comme des guides génériques pourraient indiquer. Avec dead zone 30, les transitions se font à ~70% (haut) et ~30% (bas).
+
+**Ajustez selon votre préférence - 30 est le point de départ testé.**
 
 ---
 
@@ -1085,14 +1118,16 @@ Complete mapping tables provided in **Appendix C** for building YOUR profile wit
 
 | Position | Device | JoyID |
 |----------|--------|-------|
-| 1 | VKB Gladiator R | #1 |
-| 2 | VKB Gladiator L | #2 |
-| 3 | VKB T-Rudder | #3 |
-| 4 | vJoy Device 1 | #4 |
-| 5 | vJoy Device 2 | #5 |
-| 6 | vJoy Device 3 | #6 |
-| 7 | vJoy Device 4 | #7 |
-| 8 | vJoy Device 5 | #8 |
+| 1 | VKBsim Gladiator EVO R | #1 |
+| 2 | VKBsim Gladiator EVO L | #2 |
+| 3 | VKBSim T-Rudder | #3 |
+| 4 | vJoy Device | #4 |
+| 5 | vJoy Device | #5 |
+| 6 | vJoy Device | #6 |
+| 7 | vJoy Device | #7 |
+| 8 | vJoy Device | #8 |
+
+**Note:** Les 5 vJoy devices apparaissent tous comme "vJoy Device" dans Joystick ID# Swapper - c'est normal. La différentiation Windows se fait via le pattern HATs (4-3-2-1-0) configuré dans vJoy Configure, pas par le nom affiché ici.
 
 **How to lock IDs:**
 1. Open **Joystick ID# Swapper**
@@ -1106,7 +1141,8 @@ Complete mapping tables provided in **Appendix C** for building YOUR profile wit
 2. Device order matches target configuration above
 3. Order persists across reboots
 
-[Screenshot placeholder: Joystick ID# Swapper with locked IDs]
+![Joystick ID# Swapper - Devices lockés](Appendix/a000013.png)
+*Joystick ID# Swapper avec les 8 devices assignés: VKBsim Gladiator EVO R (#1), VKBsim Gladiator EVO L (#2), VKBSim T-Rudder (#3), vJoy Device ×5 (#4-#8). Les devices vJoy apparaissent tous comme "vJoy Device" - c'est normal, la différentiation se fait via les HATs dans vJoy Configure.*
 
 ---
 
@@ -2327,19 +2363,40 @@ APCmini Pad (7,7): Note 63, Channel 1
 
 ### CRITICAL: MIDI Note Nomenclature - MIDI-OX vs UCR
 
-**Important difference between software:**
+**Two differences between software - both confirmed by screenshots:**
+
+**Difference 1: Flat vs Sharp notation**
 
 **MIDI-OX Monitor Output:**
 - Displays notes using **flat (♭) notation**
 - Example: `Note: Bb3`, `Eb4`, `Ab2`
 
 **UCR Note Selection:**
-- Uses **sharp (#) notation**  
+- Uses **sharp (#) notation**
 - Example: `A#3`, `D#4`, `G#2`
 
 ---
 
-**Conversion Table:**
+**Difference 2: Octave numbering offset**
+
+Confirmed by screenshots (a000023 vs a000020):
+
+- **MIDI-OX Monitor** shows: `C#-1` (octave -1)
+- **UCR** shows the same note as: `Octave -2, C#`
+
+**MIDI-OX octave = UCR octave + 1**
+
+| MIDI-OX affiche | UCR sélectionner |
+|-----------------|-----------------|
+| C#-1 | Octave -2, C# |
+| A#0 | Octave -1, A# |
+| D#3 | Octave 2, D# |
+
+**Toujours vérifier les deux différences quand vous mappez une note.**
+
+---
+
+**Conversion Table (flat → sharp):**
 
 | MIDI-OX Display | UCR Selection | Same Note |
 |-----------------|---------------|-----------|
@@ -2351,37 +2408,37 @@ APCmini Pad (7,7): Note 63, Channel 1
 
 **These are the same pitches, just different naming conventions.**
 
+![MIDI-OX + UCR + loopMIDI - Nomenclature en action](Appendix/a000023.png)
+*MIDI-OX Monitor montre "C#-1 Note On" (notation bémol, octave -1). UCR configure la même note comme "Octave -2, C#" (notation dièse, octave -2). Même note, deux conventions différentes.*
+
 ---
 
 **Mapping Workflow:**
 
 **Step 1: Identify note in MIDI-OX**
 - Press pad on APCmini
-- MIDI-OX Monitor shows: `Note On: Bb3`
+- MIDI-OX Monitor shows: `Note On: C#-1`
 
 **Step 2: Convert to UCR notation**
-- Bb3 = A#3
-- Remember octave number (3)
+- C#-1 → C# Octave -2 (subtract 1 from octave, keep sharp)
+- If flat: Bb3 → A# Octave 2
 
 **Step 3: Select in UCR**
-- Choose octave: `3`
-- Choose note: `A#`
+- Choose octave: `-2`
+- Choose note: `C#`
 - **Mapping complete**
 
 ---
 
 **Why This Matters:**
 
-**Common mistake:**
-- See `Bb3` in MIDI-OX
-- Look for "Bb" in UCR dropdown
-- **Don't find it** (UCR only shows sharps)
-- Confusion and wasted time
+**Common mistakes:**
+- See `Bb3` in MIDI-OX → look for "Bb" in UCR → **not found** (UCR only shows sharps)
+- See `C#-1` in MIDI-OX → select Octave -1 in UCR → **wrong octave**
 
 **Correct approach:**
-- See `Bb3` in MIDI-OX
-- Convert mentally: `Bb = A#`
-- Select `A#3` in UCR
+- Note: `C#-1` in MIDI-OX → UCR: `C#, Octave -2`
+- Note: `Bb3` in MIDI-OX → UCR: `A#, Octave 2`
 - **Works immediately**
 
 ---
