@@ -903,8 +903,8 @@ This is free knowledge from a working system. I maintain it for my own use and s
 
 **Verification:** All 5 ports listed with "0 Byte" in "Total data" column (idle state normal)
 
-![loopMIDI - 5 ports configured](Appendix/a000003.png)
-*loopMIDI avec les 5 ports virtuels configurés. Les bytes "Total data" indiquent l'activité MIDI (valeur non-nulle = signal actif).*
+![loopMIDI - 5 ports configured](Appendix/a000002.png)
+*loopMIDI avec les 5 ports virtuels configurés (96 bytes = léger trafic background). Les bytes "Total data" indiquent l'activité MIDI cumulative.*
 
 ---
 
@@ -938,8 +938,11 @@ This is free knowledge from a working system. I maintain it for my own use and s
 3. Move MIDIMix fader → See CC (Control Change) messages
 4. Press APCmini pad → See Note On/Off messages
 
-![MIDI-OX - Port Routing and MIDI Devices](Appendix/a000004.png)
-*MIDI-OX avec Port Routing (graphique gauche) et MIDI Devices (dialogue droite). Le routing graphique montre clairement: MIDI Mix → InputsToJG, APC mini mk2 → Input2ToUCR.*
+![MIDI-OX - Port Routing](Appendix/a000003.png)
+*MIDI-OX Port Routing graphique montrant clairement: MIDI Mix → InputsToJG, APC mini mk2 → Input2ToUCR. Le graphique visualise le flux de données entre devices physiques et ports loopMIDI virtuels.*
+
+![MIDI-OX - Complete mapping view](Appendix/a000006.png)
+*MIDI-OX avec vue complète du Port Mapping (arbre à droite). Montre tous les routages: MIDI Mix/APC mini → leurs ports respectifs + Events → loopMIDI ports.*
 ![MIDI-OX Monitor + loopMIDI + UCR actifs simultanément](Appendix/a000023.png)
 *Vue combinée: loopMIDI (bytes actifs: InputsToJG=4836, Input2ToUCR=909), MIDI-OX Monitor Output (notes C#-1 On/Off = pads APCmini pressés), UCR Edit (mapping Axis-to-Button visible). La chaîne complète MIDI → loopMIDI → UCR en action.*
 
@@ -979,7 +982,7 @@ Windows cannot distinguish identical vJoy devices. If all devices have the same 
 2. Verify all 5 vJoy devices listed
 3. Select each device → **Properties** → verify axes/buttons/HATs match table
 
-![vJoy Device 1 - 4 HATs](Appendix/a000001.png) ![vJoy Device 2 - 3 HATs](Appendix/a000002.png) ![vJoy Device 3 - 2 HATs](Appendix/a000006.png) ![vJoy Device 4 - 1 HAT](Appendix/a000011.png) ![vJoy Device 5 - 128 buttons](Appendix/a000012.png)
+![vJoy Device 1 - 4 HATs](Appendix/a000007.png) ![vJoy Device 2 - 3 HATs](Appendix/a000008.png) ![vJoy Device 3 - 2 HATs](Appendix/a000005.png) ![vJoy Device 4 - 1 HAT](Appendix/a000010.png) ![vJoy Device 5 - 128 buttons](Appendix/a000011.png)
 
 *vJoy Configure: Devices 1-5. Notez le pattern HATs décroissant: 4→3→2→1→0. C'est ce qui permet à Windows de distinguer chaque device. Device 5 = 128 boutons (réservé SimHub).*
 
@@ -1092,11 +1095,14 @@ Even if you bought the exact same model from the same store, Windows assigns dif
 
 ![UCR - Profil AkaistovJoy chargé](Appendix/a000018.png)
 *UCR avec le profil AkaistovJoy actif. Input devices: InputsToJG et Input2ToUCR (Core_Midi). Output devices: vJoy Stick 1-4 (Core_vJoyInterfaceWrap). Le titre de la fenêtre affiche "AkaistovJoy" = profil en cours d'exécution.*
-![vJoy Monitor - Axes actifs (tous knobs MIDIMix)](Appendix/a000014.png)
-*vJoy Monitor Device #2 avec tous les axes au maximum (barres rouges). 3 POVs visibles = confirme Device 2 = 3 HATs. Bouger les knobs MIDIMix produit ce résultat.*
+![vJoy Monitor - Tous les knobs d'une ligne fermés](Appendix/a000014.png)
+*vJoy Monitor Device #2 avec tous les axes au maximum (barres rouges = tous les knobs d'une rangée du MIDIMix fermés/max). 3 POVs visibles = confirme Device 2 = 3 HATs.*
 
-![vJoy Monitor - Axes partiels (positions variées)](Appendix/a000016.png)
-*vJoy Monitor avec axes à différentes positions - état typique pendant utilisation réelle.*
+![vJoy Monitor - Knobs à différents niveaux](Appendix/a000015.png)
+*vJoy Monitor avec axes à différentes positions - état typique pendant utilisation réelle (tous les knobs d'une ligne à différents niveaux).*
+
+![vJoy Monitor - Buttons 1 et 27 activés](Appendix/a000016.png)
+*vJoy Monitor montrant des boutons pressés (button 1 et 27 = pads APCmini). Utile pour vérifier que les mappings UCR Note → Button fonctionnent.*
 
 ---
 
@@ -1157,7 +1163,7 @@ Les screenshots UCR montrent Dead zone = **30**, pas 25% comme des guides géné
 2. Device order matches target configuration above
 3. Order persists across reboots
 
-![Joystick ID# Swapper - Devices lockés](Appendix/a000013.png)
+![Joystick ID# Swapper - Devices lockés](Appendix/a000012.png)
 *Joystick ID# Swapper avec les 8 devices assignés: VKBsim Gladiator EVO R (#1), VKBsim Gladiator EVO L (#2), VKBSim T-Rudder (#3), vJoy Device ×5 (#4-#8). Les devices vJoy apparaissent tous comme "vJoy Device" - c'est normal, la différentiation se fait via les HATs dans vJoy Configure.*
 
 ---
