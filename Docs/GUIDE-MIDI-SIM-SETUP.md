@@ -15,7 +15,7 @@
 
 ## About This Guide
 
-**This guide demonstrates [PunkTech philosophy](/manifesto) in action.**
+**This guide demonstrates [PunkTech philosophy](PUNKTECH_MANIFESTO.md) in action.**
 
 ### PunkTech Principles Applied:
 
@@ -33,9 +33,25 @@
 
 ### New to PunkTech?
 
-**Read the [PunkTech Manifesto](/manifesto) first** to understand the philosophy behind this guide.
+**Read the [PunkTech Manifesto](PUNKTECH_MANIFESTO.md) first** to understand the philosophy behind this guide.
 
 **Just want the technical details?** Keep reading below.
+
+---
+
+### A Note on Originality
+
+**I am certainly not the first person to use MIDI controllers in simulation.**
+
+Many have discovered this approach independently over the years. Communities like r/HotasDIY and hardcore sim forums have documented MIDI solutions.
+
+**However, I believe I am the first to create a clear, structured, open-source guide** that documents:
+- Complete system architecture (not just "it works for me")
+- Methodology transferable across hardware and games
+- Honest testing with limitations disclosed
+- Free knowledge under CC BY-SA 4.0 license
+
+**This guide stands on the shoulders of those who discovered MIDI → simulation before me. Credit where credit is due.**
 
 ---
 
@@ -1482,7 +1498,24 @@ MSFS 2020 is **fully functional** with this setup. The device naming is a **disp
 
 Initial setup requires 15-30 minutes extra effort to identify devices, but once configured, everything works as expected.
 
-**H-4 Hercules 8-engine stress test pending** (Sprint 4 optional).
+---
+
+**Note on Multi-Engine Aircraft:**
+
+**H-4 Hercules "8-engine" limitation discovered (February 2026):**
+
+The MSFS 2020 game engine supports a maximum of **4 independent engine controls**. Aircraft like the Hercules C-130 with 4 physical engines = no problem. However, hypothetical 8-engine aircraft (H-4 Hercules mod, etc.) have their engines **mapped in pairs** by the sim engine itself.
+
+**What this means:**
+- Engine 1+2 controlled together
+- Engine 3+4 controlled together
+- Etc.
+
+**This is a MSFS engine limitation, not an input limitation.**
+
+**Result:** This MIDI architecture provides **more control flexibility than most current simulation engines can utilize**. The 220+ input capacity exceeds what most games can currently accept.
+
+**This setup is future-proof for when simulation engines catch up to hardware capability.**
 
 ---
 
@@ -1781,6 +1814,9 @@ If you test this setup on other games, please share results. I will update this 
 
 **This is the power of modular architecture (PunkTech Principle 2).**
 
+![Full Stack in Action - Troubleshooting View](Appendix/a000024.png)
+*Complete data flow visible: loopMIDI (4920 bytes = active signal), MIDI-OX Monitor (CC messages), UCR (AkaistovJoy profile running), vJoy Monitor (button 18 pressed = APCmini pad). La chaîne complète hardware → MIDI-OX → loopMIDI → UCR → vJoy en un seul screenshot.*
+
 ---
 
 ### Using AI for Troubleshooting
@@ -1937,7 +1973,7 @@ I will update this guide with community findings.
 ### General Questions
 
 **Q: Why MIDI instead of commercial buttonboxes?**
-A: Better quality, more inputs, lower cost, open standard, pro-grade durability. See [PunkTech Manifesto - Principle 3](/manifesto#intelligent-diy).
+A: Better quality, more inputs, lower cost, open standard, pro-grade durability. See [PunkTech Manifesto - Principle 3](PUNKTECH_MANIFESTO.md#intelligent-diy).
 
 **Q: Is this plug-and-play?**
 A: NO. Requires 20-40h setup and understanding. If you want plug-and-play, buy commercial. This is for people who want to UNDERSTAND their system.
@@ -1968,7 +2004,7 @@ A: No. I didn't. You learn what's needed during setup.
 
 ### Acknowledgments
 
-**Philosophy:** This guide is a [PunkTech](/manifesto) project demonstrating rigorous engineering applied to simulation peripherals.
+**Philosophy:** This guide is a [PunkTech](PUNKTECH_MANIFESTO.md) project demonstrating rigorous engineering applied to simulation peripherals.
 
 **Tools used in creating this guide:**
 - Gemini AI (technical research assistance)
@@ -1990,7 +2026,7 @@ I used AI as tools to accelerate research and documentation. The architecture, d
 
 **Documentation:**
 - This guide (Markdown, PDF)
-- [PunkTech Manifesto](/manifesto)
+- [PunkTech Manifesto](PUNKTECH_MANIFESTO.md)
 
 ---
 
@@ -2202,7 +2238,7 @@ We all stand on shoulders of those who shared before us.
 **What inefficiencies will you engineer against next?**
 
 **Explore more:**
-- [PunkTech Manifesto](/manifesto) - The philosophy
+- [PunkTech Manifesto](PUNKTECH_MANIFESTO.md) - The philosophy
 - [PunkTech Projects](/projects) - Other applications
 - [About PunkTech](/about) - Who we are
 
@@ -2222,7 +2258,7 @@ We all stand on shoulders of those who shared before us.
 **PunkTech:**
 - Web: [punktech.ca](https://punktech.ca)
 - Guide: [punktech.ca/projects/midi-sim-setup](https://punktech.ca/projects/midi-sim-setup)
-- Manifesto: [punktech.ca/manifesto](https://punktech.ca/manifesto)
+- Manifesto: [punktech.ca/manifesto](https://punktech.caPUNKTECH_MANIFESTO.md)
 
 **Reddit:** u/PunkTech (to be created)
 
