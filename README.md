@@ -80,7 +80,7 @@ See [full compatibility matrix](Docs/GUIDE-MIDI-SIM-SETUP.md#game-compatibility-
 |---------|------------------|-----------------|
 | Price | $500-800 | $150-300 |
 | Inputs | 20-40 | 80-116 |
-| Durability | Cheap plastic | Pro-grade metal |
+| Durability | Cheap plastic | Pro-grade plastic\metal |
 | Expandability | Proprietary ecosystem | Open standard (40 years old) |
 | Resale value | Low (niche market) | High (music production use) |
 
