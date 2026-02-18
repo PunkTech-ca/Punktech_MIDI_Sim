@@ -334,6 +334,6 @@ Open an [issue](https://github.com/PunkTech-ca/Punktech_MIDI_Sim/issues) with ta
 
 ---
 
-**Built with community in Montréal, Québec 🇨🇦**
+**Built with community in Sherbrooke, Québec 🇨🇦**
 
 **PunkTech - February 2026**
