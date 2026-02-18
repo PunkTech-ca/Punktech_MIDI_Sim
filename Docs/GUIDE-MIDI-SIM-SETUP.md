@@ -517,6 +517,27 @@ Games → SimHub → Il-2 Dials (telemetry display)
 
 ---
 
+### Physical Setup Photos
+
+![Complete setup overview](Appendix/a000025.png)
+*Full cockpit setup with Il-2 Great Battles on screen. Triple monitor configuration, RGB keyboard (top), APCmini (left) and MIDIMix (right) on VESA laptop tray. This is the working environment where the system was tested for 7 weeks. Note the colored tape zones on APCmini pads and NATO color-coded knobs on MIDIMix.*
+
+![Full Akai stack - APCmini + MIDIMix](Appendix/a000026.png)
+*Close-up of the complete Akai Professional stack. APCmini (left) with colored tape zones for function grouping. MIDIMix (right) with NATO color-coded knobs (orange/red/blue rows) and tape-marked faders. Combined: 80 buttons (APCmini) + 8 faders + 24 knobs + 16 buttons (MIDIMix) = 128 discrete controls from $320 CAD of pro-grade hardware.*
+
+![MIDIMix - NATO knobs color coding detail](Appendix/a000027.png)
+*Close-up of MIDIMix showing NATO color-coded knob organization: Orange (top row) = Engine 1 controls, Red (middle) = Engine 2, Blue (bottom) = Engine 3/4. Yellow/red/green tape on faders for throttle identification. This color coding enables muscle memory and reduces cockpit scanning time.*
+
+**Color coding methodology:**
+- Orange knobs = Engine 1 (Throttle, RPM, Mixture, Cooling)
+- Red knobs = Engine 2
+- Blue knobs = Engine 3/4
+- Fader tape: Yellow = Main throttles, Red = Critical systems, Green = Secondary controls
+
+**NATO knobs note:** 90° orientation difference from stock doesn't matter for muscle memory. Tactile differentiation by color is what counts.
+
+---
+
 ## 5. Complete Software Stack {#software-stack}
 
 ### Required Software (Free unless noted)
@@ -2603,6 +2624,3 @@ Each component can be verified independently.
 - Check: Game recognizes vJoy devices (some games need restart after vJoy activation)
 
 ---
-
-## To be integrated into main guide Section 12: Troubleshooting & Debugging
-
