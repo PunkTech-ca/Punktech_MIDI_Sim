@@ -1,79 +1,62 @@
-# PunkTech Manifesto
+# The PunkTech Manifesto
+## Engineering Against Inefficiency
 
-**Engineering Against Inefficiency**
+**Version 1.0 - February 2026**
 
 ---
 
 ## What is PunkTech?
 
-PunkTech is a philosophy and methodology for approaching problems with rigorous engineering thinking, refusing mainstream inefficiency, and sharing knowledge freely.
+PunkTech is a philosophy of technological sovereignty, rigorous engineering, and pragmatic problem-solving applied to any domain where inefficiency, bullshit, or vendor lock-in exists.
 
-**Not a company. Not a product. A way of thinking.**
+**It's not a company. Not a product. Not a service.**
 
----
-
-## Core Values
-
-**Four pillars support everything we build:**
-
-### Intégrité (Integrity)
-Actions aligned with values. No hidden incentives. No compromise between what we say and what we do.
-
-### Probité (Intellectual Honesty)
-Truth over ego. Research over guessing. Admit mistakes. Verify claims. Reconstruct rather than fabricate.
-
-### Transparence (Transparency)
-Open methodology. Document limitations. Disclose tools used. No black boxes. Anyone can verify our work.
-
-### Penser "Out of the Box" (Non-Conventional Thinking)
-Question mainstream. Look outside the industry. Refuse "everyone does X" as justification. Find optimal, not popular.
-
-**Together, these create rigorous engineering you can trust.**
-
-**Remove one pillar, the whole structure fails.**
+**It's a mindset.**
 
 ---
 
-## The Five Principles
+## Core Principles
 
-### 1. Open Standards Over Proprietary Lock-in
+### 1. Open Standards Over Proprietary Systems
 
 **The Problem:**
-Proprietary ecosystems trap users. Vendor lock-in creates dependency. Closed standards die when companies abandon them.
+Proprietary systems create vendor lock-in. They die when the company dies. They force upgrades on their schedule, not yours.
 
 **The PunkTech Approach:**
-Choose open, proven standards. Prefer protocols over products. Ensure longevity through openness.
+Use open standards that have proven longevity. MIDI (40 years old). DirectInput (Windows standard). vJoy (open-source). Standards that will exist in 2036.
 
 **Examples:**
-- ✅ MIDI protocol (40 years, still relevant, open standard)
-- ✅ DirectInput (decades old, universal compatibility)
-- ✅ Markdown documentation (readable forever, no proprietary format)
-- ❌ Proprietary gaming ecosystems (locked, expensive, fragile)
-- ❌ Closed APIs (die when company pivots)
+- ✅ MIDI controllers for simulation (40-year standard)
+- ✅ Open-source software stack (vJoy, UCR)
+- ❌ Proprietary gaming buttonboxes (die when company pivots)
+- ❌ Closed ecosystems (locked to one vendor)
 
 **Principle:**
-> "Build on standards that outlive companies."
+> "Build on foundations that last decades, not products that last until the next marketing cycle."
 
 ---
 
 ### 2. Rigorous Engineering Over Marketing Bullshit
 
 **The Problem:**
-Marketing creates artificial needs. Feature lists replace substance. "New and improved" hides regression.
+Marketing sells features. Engineering solves problems. Most products optimize for marketing, not function.
 
 **The PunkTech Approach:**
-Requirements-driven design. Test empirically. Document honestly. Question claims. Measure results.
+Requirements → Design → Implementation → Validation
+
+1. **Identify the actual problem** (not what marketing says the problem is)
+2. **Research constraints** (technical limitations, compatibility)
+3. **Design intentionally** (not accidentally)
+4. **Validate empirically** (test, measure, document)
 
 **Examples:**
-- ✅ Test for 7 weeks before claiming "works perfectly"
-- ✅ Document what's tested vs what's theory
-- ✅ Admit limitations ("MW5 has 2-device UI limit")
-- ✅ Show methodology, not just results
-- ❌ "Best HOTAS setup!" (untested, unverified)
-- ❌ "Revolutionary new technology!" (marketing hyperbole)
+- ✅ Requirements-driven design (research 8 games, design for most restrictive)
+- ✅ Empirical validation (test on real hardware, document results)
+- ❌ "RGB makes it faster" (marketing bullshit)
+- ❌ "Pro gamer approved" (appeal to authority, not data)
 
 **Principle:**
-> "Show your work. Prove your claims. Admit your limits."
+> "Show your work. Provide evidence. No claims without proof."
 
 ---
 
@@ -119,302 +102,448 @@ Share knowledge freely. Build credibility through value, not through sales. Mone
 - ✅ Complete guides shared freely (no paywall)
 - ✅ No affiliate links (no hidden incentives)
 - ✅ Honest about limitations (tested vs not tested)
-- ✅ CC BY-SA 4.0 license (shareable, improvable forever)
-- ❌ "Click my affiliate link!" (corrupted objectivity)
-- ❌ Sponsored content (hidden incentives)
-- ❌ Paywalled "premium" content (gatekeeping knowledge)
+- ❌ "Buy through my link" (conflict of interest)
+- ❌ Sponsored content disguised as review
 
 **Principle:**
-> "Give value freely. Trust builds. Opportunities follow."
+> "Credibility compounds. Profit extracted early destroys it."
 
 ---
 
 ### 5. Pragmatism Over Ideology
 
 **The Problem:**
-Ideological purity over practical results. "Should work in theory" vs "works in practice." Stubbornness disguised as principles.
+Ideological purity often conflicts with practical solutions. The "right" tool on paper may be wrong in practice.
 
 **The PunkTech Approach:**
-Use the right tool for the job, even if it's not your favorite. Document reality, not ideals. Adapt when evidence shows better path.
+Use the right tool for the job. Even if it's not your favorite tool. Even if it conflicts with your preferences.
 
 **Examples:**
-- ✅ Use Windows for simulation (despite Linux preference) because vJoy/UCR are Windows-native
-- ✅ Document what actually works, not what "should" work
-- ✅ Pivot when data shows better approach (Linux → Windows after testing)
-- ❌ "I refuse to use Windows on principle" (ignoring practical reality)
-- ❌ "This should work because X" (theory over empirical test)
+- ✅ Windows for simulation (despite Linux preference) - games designed for it, mature ecosystem
+- ✅ Dual-boot (use each OS for its strengths)
+- ❌ "Linux only no matter what" (ideology over pragmatism)
+- ❌ Fighting the OS instead of solving the problem
 
 **Principle:**
-> "Optimize for results, not ideology. Document reality honestly."
+> "The goal is the solution, not proving a point about tools."
+
+---
+
+## Origin Story
+
+### August 2025: PunkTech v1 - Digital Sovereignty
+
+PunkTech began as a response to forced GAFAM taxation in Canada. The goal: build a self-hosted cloud infrastructure using Docker Swarm, accessible via personal domain (punktech.ca), with Traefik/LetsEncrypt for HTTPS.
+
+**The vision:** Technological sovereignty. Control your own data. Open standards.
+
+**October 2025:** Catastrophic server failure. Project went dormant.
+
+---
+
+### December 2025: PunkTech v2 - Resurrection Through Simulation
+
+**The pivot:**
+- Childhood dream of flight simulation activated
+- Unexpected $2000 CAD windfall
+- Started building simulation setup
+- Discovered mainstream solutions (buttonboxes) were inefficient and overpriced
+
+**The realization:**
+> "Why am I paying $500 for 20 plastic buttons when $150 professional MIDI controllers give me 80 pro-grade inputs?"
+
+**The application:**
+Applied PunkTech principles (open standards, rigorous engineering, intelligent DIY) to simulation peripherals.
+
+**The result:**
+7 weeks, $2000, 195+ inputs, architecture that respects universal constraints, fully documented and shared freely.
+
+---
+
+### February 2026: PunkTech Manifesto
+
+**The understanding:**
+
+PunkTech is not about simulation. Not about Docker. Not about any specific project.
+
+**PunkTech is a philosophy applicable to any domain where inefficiency exists.**
+
+The projects change. The principles remain.
+
+---
+
+## About the Author
+
+I am not a licensed engineer. I am a Linux sysadmin / system architect / IT operator.
+
+**Background:**
+- Stage/audio technical training (AEC - Sound/Lighting)
+- 13 years in IT networking and systems
+- Convergence of audio + IT + engineering mindset = PunkTech
+
+**Philosophy:**
+Intolérance à l'inefficacité (intolerance of inefficiency) - a family trait.
+
+My father built a complete Canadian coin collection (1800s-present) in 2 years via systematic bank box sorting.
+
+My brother went from novice to professional bassist in 2 years.
+
+I built a tier-1 simulation setup in 7 weeks.
+
+**The pattern:** Refuse mediocrity. Optimize relentlessly. Execute methodically.
 
 ---
 
 ## PunkTech in Practice
 
-### What PunkTech Is:
+### The Methodology
 
-**A methodology for:**
-- Identifying inefficient mainstream solutions
-- Researching alternatives rigorously
-- Testing empirically before claiming
-- Documenting methodology transparently
-- Sharing knowledge freely
+**When facing any problem:**
 
-**Applied to:**
-- Technology projects (MIDI simulation setup)
-- Daily life decisions (e-bike vs car analysis)
-- Work conflicts (labor dispute documentation)
-- Consumer choices (reject marketing, demand evidence)
+1. **Question the mainstream solution**
+   - Why is everyone doing it this way?
+   - Is it actually optimal, or just popular?
+   - Are there better solutions outside this industry?
 
-**Universal thinking framework, not just tech projects.**
+2. **Research rigorously**
+   - What are the actual technical constraints?
+   - What standards exist?
+   - What has longevity?
 
----
+3. **Design intentionally**
+   - Requirements-driven (not impulse-driven)
+   - Respect constraints
+   - Plan for evolution
 
-### What PunkTech Is NOT:
+4. **Validate empirically**
+   - Test on real use cases
+   - Measure results
+   - Document honestly (including failures)
 
-**Not:**
-- ❌ Anti-commercial (commerce is fine, dishonest marketing isn't)
-- ❌ Elitist gatekeeping (we share knowledge freely)
-- ❌ "Always DIY everything" (use what works, buy when appropriate)
-- ❌ Tech-only (methodology applies to any domain)
-- ❌ Perfectionism (done > perfect, document limitations)
-
-**Not ideology. Pragmatic methodology.**
-
----
-
-## The PunkTech Process
-
-**How to approach a problem the PunkTech way:**
-
-### 1. Question the Mainstream
-
-**Don't accept "everyone does X" as justification.**
-
-Ask:
-- Why is this the common solution?
-- Who benefits from this approach?
-- Is this optimal or just marketed?
+5. **Share freely**
+   - Document methodology, not just results
+   - Enable others to adapt, not just copy
+   - Build credibility through value
 
 ---
 
-### 2. Define Requirements Rigorously
+### Examples Across Domains
 
-**What do you actually need?**
+**Simulation Peripherals (Current Project):**
+- Problem: Buttonboxes overpriced, proprietary, limited
+- Solution: Professional MIDI controllers (open standard, pro-grade, affordable)
+- Result: [MIDI Sim Setup Guide](/projects/midi-sim-setup)
 
-Not:
-- ❌ "I need a gaming buttonbox" (solution, not requirement)
+**System Administration (Daily Work):**
+- Problem: Vendor solutions complex, expensive, locked-in
+- Solution: Open-source stack, standards-based, self-maintained
+- Result: Lower cost, higher control, transferable knowledge
 
-But:
-- ✅ "I need 100+ inputs for complex aircraft" (requirement)
-- ✅ "Budget: $500 max" (constraint)
-- ✅ "Must work across multiple games" (constraint)
+**Decision-Making (Life):**
+- Problem: Claims without evidence
+- Solution: Verify facts, provide proof (e.g., dictionary screenshot)
+- Result: Waste less time on bullshit arguments
 
-**Requirements → Solutions, not the reverse**
-
----
-
-### 3. Research Outside the Box
-
-**Look beyond the obvious industry.**
-
-- Simulation inputs? Check music industry (MIDI controllers)
-- Urban transport? Check cargo bikes, not just cars
-- Work conflict? Check labor law, not just company policy
-
-**Best solutions often exist adjacent to problem space.**
+**The philosophy scales.**
 
 ---
 
-### 4. Test Empirically
+## PunkTech vs Other Philosophies
 
-**Theory < Reality**
+### **PunkTech is NOT:**
 
-- Don't assume it works (test it)
-- Don't believe marketing (verify it)
-- Don't trust "should work" (make it work, document results)
+❌ **Anarchist / Anti-Authority**
+- We question authority, but accept valid expertise
+- We verify, not reject automatically
 
-**Data > opinions**
+❌ **Minimalist / Ascetic**
+- We're not against spending money
+- We're against spending money INEFFICIENTLY
 
----
+❌ **Open-Source Purist**
+- We prefer open standards
+- But we're pragmatic (Windows for simulation)
 
-### 5. Document Honestly
-
-**What worked:**
-- Specify exactly
-- Provide evidence (screenshots, data, testing duration)
-
-**What didn't work:**
-- Admit it
-- Explain why
-- Document workarounds or alternatives
-
-**What's unknown:**
-- Don't guess
-- State clearly "not tested"
-- Encourage community validation
-
-**Honesty > appearing perfect**
+❌ **Anti-Corporate**
+- We work with companies when it makes sense
+- We just refuse bullshit and lock-in
 
 ---
 
-### 6. Share Freely
+### **PunkTech IS:**
 
-**Knowledge compounds when shared.**
-
-- Document methodology (how you solved it)
-- License openly (CC BY-SA 4.0)
-- Enable community (contributions welcome)
-- No gatekeeping (paywalls corrupt)
-
-**Free knowledge > short-term profit**
+✅ **Skeptical but evidence-based**
+✅ **Value-focused, not cost-focused**
+✅ **Pragmatic, not ideological**
+✅ **Engineering-driven, not marketing-driven**
 
 ---
 
-## PunkTech Projects
+## Integrity and Honesty
 
-**All PunkTech projects follow these principles.**
+### Core Values
 
-### Current Projects:
+**Transparency:**
+- Document failures, not just successes
+- Admit limitations
+- No overpromising
 
-**MIDI Simulation Setup Guide (2026)**
-- 15,000+ word comprehensive guide
-- 7 weeks empirical testing
-- 8 games validated
-- CC BY-SA 4.0 licensed
-- Architecture designed for universal compatibility
+**No Hidden Incentives:**
+- No affiliate links
+- No sponsored content
+- No financial conflicts of interest
 
-**Future Projects:**
-- E-bike urban mobility analysis (PunkTech applied to transport)
-- PunkTrouble labor dispute documentation (workplace conflict)
-- Additional domain applications (TBD)
+**Intellectual Honesty:**
+- Use of AI assistance disclosed (Gemini, Claude)
+- Sources cited
+- "I don't know" is acceptable
 
----
+**Example from MIDI Guide:**
+- "Tested only on Il-2 Great Battles"
+- "Other games should work but not validated"
+- "Joystick Gremlin failed, UCR succeeded"
+- "UCR config could be better organized"
 
-## PunkTech License Philosophy
-
-**All PunkTech projects released under Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0).**
-
-**Why?**
-
-**Principle 4: Free Knowledge Over Short-Term Profit**
-
-Knowledge should be:
-- Freely accessible to anyone
-- Shareable without restriction
-- Improvable by the community
-- Protected from exploitation (ShareAlike)
-
-**CC BY-SA 4.0 ensures:**
-- Projects remain free forever
-- Community improvements are shared back
-- Original authors receive credit
-- Commercial use allowed (training, consulting, etc.)
-
-**PunkTech rejects:**
-- Paywalled knowledge
-- Proprietary "secret sauce"
-- Copyright hoarding
-- Information gatekeeping
-
-**We build in the open. We share freely. We improve together.**
+**Honesty builds credibility. Overpromising destroys it.**
 
 ---
 
-## Who PunkTech Is For
+## The Linux Detour: Pragmatism in Action
 
-**You might align with PunkTech if:**
+### December 2025: The Attempt
 
-- ✅ You question "everyone does it this way"
-- ✅ You read manuals for understanding, not just to follow steps
-- ✅ You value methodology over shortcuts
-- ✅ "But WHY?" is your natural response
-- ✅ You've spent hours researching a small purchase
-- ✅ Marketing bullshit annoys you deeply
-- ✅ You prefer open standards over proprietary lock-in
-- ✅ You share knowledge freely
+I tried to build the MIDI simulation setup on Linux first (CachyOS specifically). My background is Linux sysadmin - it's my comfort zone.
 
-**You probably won't align if:**
+**The problems:**
+- MIDI routing complex (JACK, ALSA, pipewire)
+- vJoy alternatives limited and unmaintained
+- Game compatibility through Proton/Wine unreliable
+- DirectInput emulation problematic
+- Too many layers, too much instability
 
-- ❌ "Just tell me what to buy" is your approach
-- ❌ You trust marketing claims without verification
-- ❌ Understanding isn't important, only results
-- ❌ Quick and easy > deep and comprehensive
-- ❌ Paywalls seem reasonable for knowledge
+**The realization (late December):**
+> "I'm fighting the OS instead of building the solution."
 
-**Not for everyone. That's OK.**
+**The decision:**
+Created Windows 11 dual-boot specifically for simulation.
 
 ---
 
-## PunkTech Origin
+### Why This Was Right
 
-**December 2025:** Frustrated with $500 gaming buttonboxes offering 20 inputs.
+**Not compromise. Not selling out. Engineering decision.**
 
-**Question:** "Why am I constrained by gaming industry thinking?"
+1. ✅ Simplified middleware stack (native DirectInput)
+2. ✅ Mature ecosystem (MIDI-OX, vJoy proven)
+3. ✅ Game compatibility (designed for Windows)
+4. ✅ Reproducibility (broader audience)
+5. ✅ Sustainability (Windows sim ecosystem stable long-term)
 
-**Research:** Musicians need TONS of inputs → MIDI controllers exist → Pro-grade, cheaper, better.
+**Principle 5: Pragmatism Over Ideology**
 
-**Realization:** This pattern repeats everywhere. Marketing traps consumers into suboptimal products.
+I prefer Linux. But the goal was "optimal simulation setup," not "prove Linux works for everything."
 
-**Decision:** Document the methodology. Share freely. Help others escape the traps.
-
-**PunkTech born:** Not as company, as philosophy.
+**Use the right tool for the job.**
 
 ---
 
-## The Name: PunkTech
+## Applications Beyond Technology
 
-**"Punk":**
-- Reject mainstream inefficiency
-- Question authority (corporate marketing)
-- DIY ethos (build better yourself)
-- Counterculture against consumerism
+### The PunkTech Mindset
 
-**"Tech":**
-- Engineering rigor
-- Systems thinking
-- Empirical validation
-- Methodology over products
+**Daily life example: The Facebook Dictionary Screenshot**
 
-**Combined:**
-Engineering mindset applied with punk attitude. Rigorous but rebellious. Methodical but unconventional.
+**Situation:**
+Someone claimed "historicité" isn't a word.
+
+**Typical response:**
+Argue emotionally, back-and-forth debate.
+
+**PunkTech response:**
+Screenshot of dictionary definition. Posted. Done.
+
+**No argumentation. Just facts.**
+
+---
+
+### Transferable to Any Domain
+
+**Home renovation:**
+- Question contractor recommendations
+- Research building codes yourself
+- Verify materials are actually optimal
+
+**Car purchase:**
+- Question dealer claims
+- Research actual reliability data
+- Look outside mainstream brands
+
+**Career decisions:**
+- Question "everyone does X"
+- Research actual market data
+- Build demonstrable portfolio vs credentials
+
+**Investment:**
+- Question financial advisor incentives
+- Research fee structures
+- Verify historical data
+
+**The methodology is universal.**
+
+---
+
+## Building a PunkTech Portfolio
+
+### Why This Matters
+
+**Traditional credentials:**
+- Diplomas: Prove you passed exams
+- Certifications: Prove you memorized material
+- **Problem: Everyone has these. Commoditized.**
+
+**PunkTech portfolio:**
+- Projects: Prove you BUILD solutions
+- Documentation: Prove you THINK methodically
+- Community use: Prove you CREATE VALUE
+- **Result: Differentiation. Demonstrable expertise.**
+
+---
+
+### The Strategy
+
+**punktech.ca becomes:**
+
+Not just "a guide website."
+
+But: **Personal engineering portfolio demonstrating methodology across domains.**
+
+```
+punktech.ca/
+├── Philosophy (this manifesto)
+├── Projects
+│   ├── MIDI Sim Setup (completed Feb 2026)
+│   ├── [Home Networking] (future)
+│   └── [Audio Architecture] (future)
+└── About (who I am)
+```
+
+**Each project:**
+- Demonstrates same principles
+- Different domain
+- Same rigorous methodology
+
+**Result: Credibility compounds.**
+
+---
+
+### Career Application
+
+**In 3-5 years:**
+
+**Interview question:**
+> "Tell me about a complex system you've architected."
+
+**Response:**
+> "I have my portfolio at punktech.ca. Let me show you..."
+
+*[Opens laptop, shows site, walks through architecture, demonstrates methodology]*
+
+**Interviewer sees:**
+- ✅ Real projects (not just claims)
+- ✅ Rigorous documentation
+- ✅ Community validation (people use it)
+- ✅ Clear methodology (transferable)
+- ✅ Communication skills (well-written guides)
+
+**Result: Instant credibility.**
+
+**Better than any diploma or certification.**
+
+---
+
+## Living Document
+
+**This manifesto is version 1.0.**
+
+It will evolve as:
+- New principles emerge from practice
+- New projects demonstrate applications
+- Community feedback refines concepts
+
+**PunkTech is not dogma.**
+
+**It's a living philosophy, refined through real-world application.**
+
+---
+
+## Join the Philosophy
+
+**You don't need permission to apply PunkTech principles.**
+
+**Start now:**
+1. Identify inefficiency in your domain
+2. Question mainstream solutions
+3. Research rigorously
+4. Build intentionally
+5. Document honestly
+6. Share freely
+
+**PunkTech is not exclusive.**
+
+**It's a methodology anyone can adopt.**
+
+---
+
+## Final Thoughts
+
+### On Money
+
+> "Tu veux faire de l'argent? Oublie l'argent."
+
+Build credibility. Create value. Share freely.
+
+Money comes as consequence, not goal.
+
+### On Perfection
+
+> "Functionality > Aesthetics"
+
+Ship working solutions. Iterate. Document honestly.
+
+Perfect is enemy of done.
+
+### On Ideology
+
+> "Pragmatism > Ideology. Always."
+
+Use what works. Adapt to constraints.
+
+The goal is the solution, not the purity.
 
 ---
 
 ## Contact & Community
 
-**Website:** https://punktech.ca *(coming June 2026)*
+**PunkTech:**
+- Web: [punktech.ca](https://punktech.ca)
+- Manifesto: [punktech.ca/manifesto](https://punktech.ca/manifesto)
+- Projects: [punktech.ca/projects](https://punktech.ca/projects)
 
-**Projects:** https://github.com/PunkTech-ca
+**Reddit:** u/PunkTech (to be created)
 
-**Philosophy:** Question. Research. Test. Document. Share.
+**Philosophy:**
+Engineering Against Inefficiency.
 
-**Motto:** Engineering against inefficiency.
-
----
-
-## A Final Note
-
-**PunkTech is not:**
-- A product to sell you
-- A course to buy
-- A service to subscribe to
-
-**PunkTech is:**
-- A way of thinking
-- A methodology to apply
-- Knowledge to share
-
-**If it helps you think more rigorously, question more deeply, and share more freely:**
-
-**Mission accomplished.**
-
-**Welcome to PunkTech.** 🎯
+Refuse the toys. Demand pro-grade.
 
 ---
 
-**Questions? Ideas? Contributions?**
+**Version 1.0 - February 2026**
 
-Open an issue on any PunkTech project repository. Community discussion welcome.
+*This manifesto will evolve. Check punktech.ca for updates.*
 
-**Let's engineer against inefficiency. Together.** ✨
+---
+
+**— PunkTech**
+
+*"Question everything. Verify facts. Provide evidence."*
