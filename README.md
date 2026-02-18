@@ -206,6 +206,6 @@ Thank you.
 
 ---
 
-**Built with care in Montréal, Québec 🇨🇦**
+**Built with care in Sherbrooke, Québec 🇨🇦**
 
 **PunkTech - February 2026**
