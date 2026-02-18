@@ -1,71 +1,123 @@
-# Creative Commons Attribution-ShareAlike 4.0 International
+# Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+
+**PunkTech MIDI Simulation Setup Guide**
+
+Copyright © 2026 PunkTech
+
+---
+
+## License Summary
 
 This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
 
-**To view a copy of this license, visit:** http://creativecommons.org/licenses/by-sa/4.0/
+**You are free to:**
+
+- ✅ **Share** — copy and redistribute the material in any medium or format
+- ✅ **Adapt** — remix, transform, and build upon the material for any purpose, even commercially
+
+**Under the following terms:**
+
+- **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+
+- **ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+
+- **No additional restrictions** — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
 
 ---
 
-## You are free to:
+## Full License Text
 
-**Share** — copy and redistribute the material in any medium or format
+To view the complete legal text of this license, visit:
 
-**Adapt** — remix, transform, and build upon the material for any purpose, even commercially.
-
-The licensor cannot revoke these freedoms as long as you follow the license terms.
+**https://creativecommons.org/licenses/by-sa/4.0/legalcode**
 
 ---
 
-## Under the following terms:
+## Proper Attribution
 
-**Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+When using or adapting this work, please provide attribution as follows:
 
-**ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+```
+PunkTech MIDI Simulation Setup Guide by PunkTech
+https://github.com/PunkTech-ca/Punktech_MIDI_Sim
+Licensed under CC BY-SA 4.0
+https://creativecommons.org/licenses/by-sa/4.0/
+```
 
-**No additional restrictions** — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+Or in-text:
 
----
-
-## Notices:
-
-You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation.
-
-No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.
-
----
-
-## Full Legal Code
-
-The complete legal text of this license is available at:
-https://creativecommons.org/licenses/by-sa/4.0/legalcode
+> This work is based on the [PunkTech MIDI Simulation Setup Guide](https://github.com/PunkTech-ca/Punktech_MIDI_Sim) by PunkTech, licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 
 ---
 
-## What This Means for PunkTech MIDI Simulation Setup Guide
+## What This License Covers
 
-**This license covers:**
-- ✅ All documentation in this repository (markdown files, text content)
-- ✅ Methodology and architecture descriptions
-- ✅ Diagrams and illustrations (when created)
-- ✅ UCR profile reference files (as educational material)
+**This license applies to:**
+- ✅ The complete guide text and documentation
+- ✅ All written explanations and methodology
+- ✅ Screenshots and diagrams created for this guide
+- ✅ The overall structure and organization
+- ✅ Code examples and configuration snippets
 
 **This license does NOT cover:**
-- ❌ Third-party software mentioned (vJoy, UCR, MIDI-OX, etc. - each has its own license)
-- ❌ Hardware products (Akai, VKB trademarks belong to manufacturers)
-- ❌ Game titles and trademarks (belong to respective publishers)
-
-**Attribution Example:**
-
-When sharing or adapting this guide, credit as follows:
-
-> "PunkTech MIDI Simulation Setup Guide" by PunkTech, licensed under CC BY-SA 4.0  
-> Original: https://github.com/PunkTech-ca/Punktech_MIDI_Sim
-
-**For derivative works:**
-- State it's based on this guide
-- Link to this repository
-- Use the same CC BY-SA 4.0 license
+- ❌ Third-party software mentioned (loopMIDI, MIDI-OX, vJoy, UCR, etc.) — each has its own license
+- ❌ Hardware products mentioned (Akai MIDIMix, APCmini, VKB, etc.) — trademarks belong to respective owners
+- ❌ Game titles mentioned — trademarks belong to respective publishers
+- ❌ The MIDI protocol itself — international standard
 
 ---
 
-**Questions about licensing?** See the [license section in the main guide](docs/midi-sim-setup-guide.md#license--usage) or open an issue.
+## Why CC BY-SA 4.0?
+
+**This license was chosen because:**
+
+1. **Enables sharing** — Anyone can distribute this guide
+2. **Enables adaptation** — Community can improve, translate, extend
+3. **Allows commercial use** — Training courses, consulting allowed with attribution
+4. **Protects against exploitation** — ShareAlike prevents proprietary derivatives
+5. **Aligns with PunkTech values** — Free knowledge, community-driven
+
+**The ShareAlike clause ensures** that improvements to this guide remain open and accessible to everyone.
+
+---
+
+## Permissions Beyond This License
+
+If you wish to use this work in a way not permitted by this license, contact:
+
+**GitHub Issues:** https://github.com/PunkTech-ca/Punktech_MIDI_Sim/issues
+
+---
+
+## Disclaimer
+
+**This guide is provided "AS IS" without warranty of any kind, express or implied.**
+
+The author is not responsible for:
+- Hardware damage
+- Software conflicts
+- Data loss
+- Gaming performance issues
+- Any consequences of following this guide
+
+**Use at your own risk. Test thoroughly before relying on this setup in critical scenarios.**
+
+---
+
+## Contributing
+
+By contributing to this project, you agree that your contributions will be licensed under the same CC BY-SA 4.0 license.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+---
+
+**License Badge:**
+
+[![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
+
+---
+
+**Last Updated:** February 2026
+
+**License Version:** CC BY-SA 4.0 International
