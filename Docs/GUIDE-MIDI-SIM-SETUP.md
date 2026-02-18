@@ -141,7 +141,7 @@ Knowledge should be freely accessible, shareable, and improvable by the communit
 **It does NOT cover:**
 - Software mentioned (each has its own license: vJoy, UCR, MIDI-OX, etc.)
 - Hardware products (trademarked/copyrighted by manufacturers)
-- UCR profile files (provided as reference study material, see Section 7.4)
+- UCR profile files (provided as reference study material, see Section 7.5)
 
 **The KNOWLEDGE and METHODOLOGY are CC BY-SA 4.0.**
 
@@ -1013,7 +1013,52 @@ Windows cannot distinguish identical vJoy devices. If all devices have the same 
 
 ---
 
-### 7.4 UCR Configuration
+### 7.4 Joystick ID# Swapper Configuration
+
+**⚠️ CRITICAL: Configure Joystick ID# Swapper BEFORE UCR**
+
+**Why this order matters:**
+- UCR maps to specific vJoy device numbers (vJoy 1, 2, 3, 4)
+- If device IDs change after UCR configuration, all mappings break
+- Lock IDs FIRST, then configure UCR to match those locked IDs
+
+---
+
+**After installing Joystick ID# Swapper, lock device IDs to prevent Windows randomization.**
+
+**Target configuration:**
+
+| Position | Device | JoyID |
+|----------|--------|-------|
+| 1 | VKBsim Gladiator EVO R | #1 |
+| 2 | VKBsim Gladiator EVO L | #2 |
+| 3 | VKBSim T-Rudder | #3 |
+| 4 | vJoy Device | #4 |
+| 5 | vJoy Device | #5 |
+| 6 | vJoy Device | #6 |
+| 7 | vJoy Device | #7 |
+| 8 | vJoy Device | #8 |
+
+**Note:** Les 5 vJoy devices apparaissent tous comme "vJoy Device" dans Joystick ID# Swapper - c'est normal. La différentiation Windows se fait via le pattern HATs (4-3-2-1-0) configuré dans vJoy Configure, pas par le nom affiché ici.
+
+**How to lock IDs:**
+1. Open **Joystick ID# Swapper**
+2. Current device IDs shown in list
+3. Swap devices to desired order (drag & drop or swap buttons)
+4. Click **"Edit"** to lock configuration
+5. **Reboot** for changes to take effect
+
+**Verification:**
+1. Run `joy.cpl` after reboot
+2. Device order matches target configuration above
+3. Order persists across reboots
+
+![Joystick ID# Swapper - Devices lockés](Appendix/a000012.png)
+*Joystick ID# Swapper avec les 8 devices assignés: VKBsim Gladiator EVO R (#1), VKBsim Gladiator EVO L (#2), VKBSim T-Rudder (#3), vJoy Device ×5 (#4-#8). Les devices vJoy apparaissent tous comme "vJoy Device" - c'est normal, la différentiation se fait via les HATs dans vJoy Configure.*
+
+---
+
+### 7.5 UCR Configuration
 
 **After installing UCR, you have two options for configuration.**
 
@@ -1150,42 +1195,6 @@ Complete mapping tables provided in **Appendix C** for building YOUR profile wit
 Les screenshots UCR montrent Dead zone = **30**, pas 25% comme des guides génériques pourraient indiquer. Avec dead zone 30, les transitions se font à ~70% (haut) et ~30% (bas).
 
 **Ajustez selon votre préférence - 30 est le point de départ testé.**
-
----
-
-### 7.5 Joystick ID# Swapper Configuration
-
-**After installing Joystick ID# Swapper, lock device IDs to prevent Windows randomization.**
-
-**Target configuration:**
-
-| Position | Device | JoyID |
-|----------|--------|-------|
-| 1 | VKBsim Gladiator EVO R | #1 |
-| 2 | VKBsim Gladiator EVO L | #2 |
-| 3 | VKBSim T-Rudder | #3 |
-| 4 | vJoy Device | #4 |
-| 5 | vJoy Device | #5 |
-| 6 | vJoy Device | #6 |
-| 7 | vJoy Device | #7 |
-| 8 | vJoy Device | #8 |
-
-**Note:** Les 5 vJoy devices apparaissent tous comme "vJoy Device" dans Joystick ID# Swapper - c'est normal. La différentiation Windows se fait via le pattern HATs (4-3-2-1-0) configuré dans vJoy Configure, pas par le nom affiché ici.
-
-**How to lock IDs:**
-1. Open **Joystick ID# Swapper**
-2. Current device IDs shown in list
-3. Swap devices to desired order (drag & drop or swap buttons)
-4. Click **"Edit"** to lock configuration
-5. **Reboot** for changes to take effect
-
-**Verification:**
-1. Run `joy.cpl` after reboot
-2. Device order matches target configuration above
-3. Order persists across reboots
-
-![Joystick ID# Swapper - Devices lockés](Appendix/a000012.png)
-*Joystick ID# Swapper avec les 8 devices assignés: VKBsim Gladiator EVO R (#1), VKBsim Gladiator EVO L (#2), VKBSim T-Rudder (#3), vJoy Device ×5 (#4-#8). Les devices vJoy apparaissent tous comme "vJoy Device" - c'est normal, la différentiation se fait via les HATs dans vJoy Configure.*
 
 ---
 
@@ -2624,3 +2633,7 @@ Each component can be verified independently.
 - Check: Game recognizes vJoy devices (some games need restart after vJoy activation)
 
 ---
+
+**Engineering Against Inefficiency.**
+
+**— PunkTech, February 2026**
