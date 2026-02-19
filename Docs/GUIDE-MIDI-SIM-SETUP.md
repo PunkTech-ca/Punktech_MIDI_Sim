@@ -151,24 +151,24 @@ Knowledge should be freely accessible, shareable, and improvable by the communit
 
 ## Table of Contents
 
-1. [Project Genesis](#project-genesis)
-2. [The Problem](#the-problem)
-3. [The Solution](#the-solution)
-4. [Complete Hardware List](#hardware-list)
-5. [Complete Software Stack](#software-stack)
-6. [System Architecture](#system-architecture)
-7. [Step-by-Step Setup Guide](#setup-guide)
-8. [Configuration Details](#configuration-details)
-9. [Game-Specific Setup](#game-specific)
-10. [Troubleshooting & Debugging](#troubleshooting)
-11. [Testing & Validation](#testing-validation)
-12. [FAQ](#faq)
-13. [Community & Support](#community)
-14. [Appendix & Resources](#appendix)
+1. [Project Genesis](#1-project-genesis)
+2. [The Problem](#2-the-problem)
+3. [The Solution](#3-the-solution)
+4. [Complete Hardware List](#4-complete-hardware-list)
+5. [Complete Software Stack](#5-complete-software-stack)
+6. [System Architecture](#6-system-architecture)
+7. [Step-by-Step Setup Guide](#7-software-configuration)
+8. [Configuration Details](#7-software-configuration)
+9. [Game-Specific Setup](#8-game-specific-setup)
+10. [Troubleshooting & Debugging](#10-troubleshooting--debugging)
+11. [Testing & Validation](#11-testing--validation)
+12. [FAQ](#12-faq)
+13. [Community & Support](#13-community--support)
+14. [Appendix & Resources](#14-appendix--resources)
 
 ---
 
-## 1. Project Genesis {#project-genesis}
+## 1. Project Genesis
 
 ### Timeline: December 2025 - February 2026
 
@@ -269,7 +269,7 @@ MIDI controllers. Akai MIDImix = 8 physical faders + 24 knobs for $150 CAD.
 
 ---
 
-## 2. The Problem {#the-problem}
+## 2. The Problem
 
 ### Universal Pain Points in Simulation
 
@@ -312,7 +312,7 @@ Typical simmer journey:
 
 ---
 
-## 3. The Solution {#the-solution}
+## 3. The Solution
 
 ### The PunkTech MIDI Architecture
 
@@ -390,7 +390,7 @@ Games → SimHub → Il-2 Dials (telemetry display)
 
 ---
 
-## 4. Complete Hardware List {#hardware-list}
+## 4. Complete Hardware List
 
 ### Primary Flight Controls
 
@@ -538,7 +538,7 @@ Games → SimHub → Il-2 Dials (telemetry display)
 
 ---
 
-## 5. Complete Software Stack {#software-stack}
+## 5. Complete Software Stack
 
 ### Required Software (Free unless noted)
 
@@ -628,7 +628,7 @@ Parallel: Head Tracking
 
 ---
 
-## 6. System Architecture {#system-architecture}
+## 6. System Architecture
 
 ### Complete Data Flow Diagram
 
@@ -839,7 +839,7 @@ JoyID #8: vJoy Device 5 (128 buttons, 0 HATs, SimHub reserved)
 
 ---
 
-## 7. Software Configuration {#software-configuration}
+## 7. Software Configuration
 
 **Note:** This section covers CONFIGURATION after installation.
 
@@ -1217,7 +1217,7 @@ If you study and recreate:
 
 ---
 
-## 8. Game-Specific Setup {#game-specific}
+## 8. Game-Specific Setup
 
 ### Game Compatibility Matrix
 
@@ -1714,7 +1714,7 @@ If you test this setup on other games, please share results. I will update this 
 
 ---
 
-## 9. Game Bindings & Configuration {#game-bindings}
+## 9. Game Bindings & Configuration
 
 **Status:** To be documented in Sprint 4-5
 
@@ -1728,7 +1728,7 @@ If you test this setup on other games, please share results. I will update this 
 
 ---
 
-## 10. Troubleshooting & Debugging {#troubleshooting}
+## 10. Troubleshooting & Debugging
 
 ### Startup Sequence (CRITICAL)
 
@@ -1880,7 +1880,7 @@ If you test this setup on other games, please share results. I will update this 
 
 ---
 
-## 11. Testing & Validation {#testing-validation}
+## 11. Testing & Validation
 
 ### What I've Tested (PunkTech Principle 4: Honesty)
 
@@ -2004,7 +2004,7 @@ I will update this guide with community findings.
 
 ---
 
-## 12. FAQ {#faq}
+## 12. FAQ
 
 ### General Questions
 
@@ -2019,7 +2019,7 @@ A: No. I didn't. You learn what's needed during setup.
 
 ---
 
-## 13. Community & Support {#community}
+## 13. Community & Support
 
 ### No Guarantee of Support from Author (PunkTech Principle 4)
 
@@ -2036,7 +2036,7 @@ A: No. I didn't. You learn what's needed during setup.
 
 ---
 
-## 14. Appendix & Resources {#appendix}
+## 14. Appendix & Resources
 
 ### Acknowledgments
 
